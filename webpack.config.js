@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 var dir_js = path.resolve(__dirname, 'src/client');
-var dir_build = path.resolve(__dirname, 'public');
+var dir_build = path.resolve(__dirname, 'www/public/js');
 
 module.exports = {
   entry: path.resolve(dir_js, 'index.js'),
