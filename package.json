@@ -1,0 +1,49 @@
+{
+  "name": "node-webapp-template",
+  "version": "0.0.1",
+  "description": "a basic node template for web apps that makes a few stack commitments",
+  "main": "server.js",
+  "scripts": {
+    "webpack": "webpack",
+    "webpackServer": "webpack-dev-server --hot --inline --port 8081",
+    "watchServer": "nodemon -e js,jsx,json -w server.js -w src/server -i src/client -x babel-node server",
+    "devServers": "parallelshell \"npm run webpackServer\" \"npm run watchServer\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogovski/node-webapp-template.git"
+  },
+  "keywords": [
+    "node",
+    "starter",
+    "webapp",
+    "express",
+    "webpack",
+    "babel",
+    "nodemon"
+  ],
+  "author": "rogovski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rogovski/node-webapp-template/issues"
+  },
+  "homepage": "https://github.com/rogovski/node-webapp-template#readme",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.1.21",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.18",
+    "colors": "^1.1.2",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "nodemon": "^1.8.1",
+    "webpack": "^1.12.6",
+    "webpack-dev-server": "^1.12.1",
+    "parallelshell": "^2.0.0"
+  }
+}
