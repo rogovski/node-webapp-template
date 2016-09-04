@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if [ ! [x`pwd | grep .*node-webapp-template` = x1] ]; then
-  echo "EXITING"
-  exit 1
-fi
-
 rm -rf .git
 rm package.json
 rm README.md
