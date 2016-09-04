@@ -38,3 +38,4 @@ jspm_packages
 
 www/public/js/bundle.js
 www/public/js/bundle.js.map
+.DS_Store
