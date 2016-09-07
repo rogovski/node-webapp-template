@@ -1,6 +1,7 @@
 import express from 'express';
 import http from 'http';
 import path from 'path';
+import config from './config';
 
 
 /**
@@ -34,6 +35,6 @@ app.get('/', (req, res) => {
 /**
  * start server
  */
-server.listen(8080, () => {
+server.listen(config.port, () => {
   console.log('SERVER RUNNING.');
 });
