@@ -6,6 +6,7 @@
   "scripts": {
     "webpack": "webpack",
     "start-prod": "better-npm-run start-prod",
+    "start-dev": "better-npm-run start-dev",
     "webpackServer": "webpack-dev-server --hot --inline --port 8081",
     "watchServer": "nodemon -e js,jsx,json -w server.js -w src/server -i src/client -x babel-node server",
     "devServers": "parallelshell \"npm run webpackServer\" \"npm run watchServer\" ",
@@ -16,6 +17,13 @@
       "command": "node ./bin/server.js",
       "env": {
         "NODE_ENV": "production",
+        "PORT": 8080
+      }
+    },
+    "start-dev": {
+      "command": "nodemon -e js,jsx,json -w server.js -i src/client -x node ./bin/server.js",
+      "env": {
+        "NODE_ENV": "development",
         "PORT": 8080
       }
     }
